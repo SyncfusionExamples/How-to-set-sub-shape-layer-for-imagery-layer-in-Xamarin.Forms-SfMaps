@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MapsSubLayer"
+             xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
+             x:Class="MapsSubLayer.MainPage">
+
+    <maps:SfMaps VerticalOptions="FillAndExpand">
+
+        <maps:SfMaps.Layers>
+            <maps:ImageryLayer>
+
+                <maps:ImageryLayer.Sublayers>
+                    <maps:ShapeFileLayer Uri="africa.shp">
+                        <maps:ShapeFileLayer.ShapeSettings>
+                            <maps:ShapeSetting ShapeFill="Red"/>
+                        </maps:ShapeFileLayer.ShapeSettings>
+                    </maps:ShapeFileLayer>
+                </maps:ImageryLayer.Sublayers>
+
+            </maps:ImageryLayer>
+        </maps:SfMaps.Layers>
+
+    </maps:SfMaps>
+
+
+</ContentPage>
